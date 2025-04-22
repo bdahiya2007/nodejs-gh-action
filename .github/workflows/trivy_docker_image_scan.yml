@@ -21,6 +21,9 @@ jobs:
 
       - name: Install Trivy
         uses: aquasecurity/setup-trivy@v0.2.3
+        
+      - name: Aqua Security Trivy
+        uses: aquasecurity/trivy-action@0.30.0
         with:
           scan-type: image
           image-ref: trivy-docker-image-scan-target:latest
