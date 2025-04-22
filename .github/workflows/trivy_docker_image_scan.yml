@@ -20,7 +20,7 @@ jobs:
         run: docker build -t trivy-docker-image-scan-target:latest .
 
       - name: Install Trivy
-        uses: aquasecurity/trivy-action@v0.15.0
+        uses: aquasecurity/setup-trivy@v0.2.3
         with:
           scan-type: image
           image-ref: trivy-docker-image-scan-target:latest
