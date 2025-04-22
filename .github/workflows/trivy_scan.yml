@@ -25,3 +25,9 @@ jobs:
 
     - name: gitleaks Code Scan
       run: gitleaks detect source . -r gitleaks-report.json  -f json
+
+    - name: Upload Trivy Scan Report as Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: trivy-scan-report
+        path: fs-report.json 
