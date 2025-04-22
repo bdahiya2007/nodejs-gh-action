@@ -3,7 +3,6 @@ name: Deploy Docker image to Docker Hub Registry
 on:
   push:
     branches: [ "main" ]
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
